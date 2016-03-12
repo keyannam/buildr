@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get '/users/:user_id/is_following' => "users#is_following"
 
+  get '/send_password' => "users#reset_password"
+
   resources :posts do
     resources :comments
   end
