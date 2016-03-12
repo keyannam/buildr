@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
          :token_authenticatable
 
   has_many :auth_tokens
+  has_many :posts, :dependent => :destroy
 
   def followed_users_posts
     users = self.all_following
