@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
 
+  # Follow gem
+  acts_as_followable
+  acts_as_follower
+
+
   validates_presence_of :username
   validates_uniqueness_of :username
 
